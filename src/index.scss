@@ -1,0 +1,12 @@
+.onlinePayment {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .onlinePayment {
+    width: 1024px;
+    height: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

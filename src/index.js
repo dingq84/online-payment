@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
+import Decoration from './components/decoration/index';
+import OrderInfo from './components/orderInfo/index';
+
+import './_base.scss';
+import './index.scss';
+
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <div className="onlinePayment">
+    <Decoration />
+    <OrderInfo />
+  </div>, document.getElementById('root'),
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

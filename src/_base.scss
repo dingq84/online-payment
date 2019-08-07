@@ -1,0 +1,39 @@
+:root {
+  --color-dark-blue: #173060;
+  --color-light-blue: #62a1d2;
+  --color-light-grey: #b3aba6;
+  --color-yellow: #ff8f14;
+  --color-pink: #f65453;
+  --color-red: #cc251b;
+  --color-white: #ffffff;
+  --color-dark-grey: #505050;
+  // FONT VARIABLES
+  --font-primary: "Noto Sans TC", sans-serif;
+
+  // RESPONSIVE BREAKPOINTS
+  --bp-largest: 75em; // 1200px
+  --bp-large: 62.5em; // 1000px
+  --bp-medium: 50em; // 800px;
+  --bp-small: 37.5em; // 600px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+  @media only screen and (max-width: var(--bp-largest)) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: var(--font-primary);
+}
