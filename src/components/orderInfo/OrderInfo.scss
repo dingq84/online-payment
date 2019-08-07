@@ -1,4 +1,6 @@
 .onlinePayment__orderInfo {
+  margin-top: 5%;
+
   &__steps {
     &--title {
       color: var(--color-dark-blue);
@@ -64,6 +66,66 @@
 
         & span:nth-child(1) {
           display: none;
+        }
+      }
+    }
+  }
+
+  &__datas {
+    margin-top: 5%;
+    height: 411px;
+
+    & > h1 {
+      font-size: 22px;
+      color: var(--color-light-blue);
+    }
+
+    &--context {
+      margin-top: 10px;
+      border: 2px solid var(--color-light-blue);
+      border-radius: 10px;
+      padding: 20px;
+      position: relative;
+
+      &::before {
+        content: "";
+        border-left: 20px solid transparent;
+        border-top: 15px solid var(--color-light-blue);
+        border-right: 20px solid transparent;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      & > h1 {
+        font-size: 18px;
+        color: var(--color-light-grey);
+        letter-spacing: 2px;
+      }
+
+      & > div {
+        height: 74.5px;
+        margin-top: 12px;
+        margin-bottom: 24px;
+        width: 100%;
+        border: 1px solid var(--color-dark-blue);
+      }
+
+      & > span {
+        margin-left: auto;
+        display: flex;
+        width: 20%;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--color-light-blue);
+
+        & h3 {
+          font-size: 18px;
+        }
+
+        & h2 {
+          font-size: 24px;
         }
       }
     }

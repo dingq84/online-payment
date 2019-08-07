@@ -36,9 +36,13 @@ export default function OrderInfoView() {
       <div className="onlinePayment__orderInfo__datas">
         <h1>確認訂單金額</h1>
         <div className="onlinePayment__orderInfo__datas--context">
+          <h1>訂單編號201908100111</h1>
           <div>123</div>
           <div>123</div>
-          <span>Total $2000</span>
+          <span>
+            <h3>Total</h3>
+            <h2>$2000</h2>
+          </span>
         </div>
       </div>
     </div>
