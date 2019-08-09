@@ -73,7 +73,7 @@
 
   &__datas {
     margin-top: 5%;
-    height: 411px;
+    // height: 411px;
 
     & > h1 {
       font-size: 22px;
@@ -100,16 +100,82 @@
 
       & > h1 {
         font-size: 18px;
-        color: var(--color-light-grey);
+        color: var(--color-dark-grey);
         letter-spacing: 2px;
       }
 
-      & > div {
-        height: 74.5px;
+      &--items {
+        height: 100px;
         margin-top: 12px;
         margin-bottom: 24px;
         width: 100%;
         border: 1px solid var(--color-dark-blue);
+        display: flex;
+        justify-content: space-around;
+
+        & img {
+          height: 100%;
+        }
+
+        &--text {
+          width: 40%;
+
+          & h3 {
+            font-size: 18px;
+            color: var(--color-dark-grey);
+            height: 35px;
+          }
+
+          & p {
+            font-size: 14px;
+            color: var(--color-light-grey);
+          }
+        }
+
+        &--total {
+          width: 30%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          &--count {
+            width: 140px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+
+            & > button {
+              width: 30px;
+              height: 30px;
+              background-color: transparent;
+              border: 1px solid var(--color-light-grey);
+              color: var(--color-light-grey);
+              font-size: 20px;
+              cursor: pointer;
+            }
+
+            & > span {
+              width: 76px;
+              height: 30px;
+              text-align: center;
+              font-size: 12px;
+              line-height: 30px;
+              border-top: 1px solid var(--color-light-grey);
+              border-bottom: 1px solid var(--color-light-grey);
+            }
+          }
+
+          & > span {
+            font-size: 18px;
+            color: var(--color-dark-grey);
+          }
+
+          & img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+          }
+        }
       }
 
       & > span {
@@ -138,7 +204,7 @@
       &--progress {
         &--text {
           color: var(--color-light-grey);
-          // left: auto;
+          white-space: nowrap;
 
           & span:nth-child(1) {
             display: inline;
@@ -146,11 +212,11 @@
           }
 
           &:nth-child(3) {
-            left: 15%;
+            left: 20%;
           }
 
           &:nth-child(6) {
-            left: 58%;
+            left: 75%;
           }
         }
       }

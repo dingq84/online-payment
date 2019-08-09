@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import Decoration from './components/decoration/index';
 import OrderInfo from './components/orderInfo/index';
+import PaymentType from './components/paymentType/index';
+import Footer from './components/footer/index';
 
 import './_base.scss';
 import './index.scss';
@@ -13,6 +15,8 @@ ReactDOM.render(
   <div className="onlinePayment">
     <Decoration />
     <OrderInfo />
+    <PaymentType />
+    <Footer />
   </div>, document.getElementById('root'),
 );
 

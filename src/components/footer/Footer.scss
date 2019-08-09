@@ -1,0 +1,12 @@
+.onlinePayment__footer {
+  width: 100%;
+  background-color: var(--color-dark-blue);
+
+  & > h1 {
+    color: var(--color-white);
+    font-size: 12px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+  }
+}
