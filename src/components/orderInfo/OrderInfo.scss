@@ -1,5 +1,5 @@
 .onlinePayment__orderInfo {
-  margin-top: 5%;
+  margin-bottom: 5%;
 
   &__steps {
     &--title {
@@ -73,11 +73,11 @@
 
   &__datas {
     margin-top: 5%;
-    // height: 411px;
 
     & > h1 {
       font-size: 22px;
       color: var(--color-light-blue);
+      text-align: center;
     }
 
     &--context {
@@ -113,73 +113,81 @@
         display: flex;
         justify-content: space-around;
 
-        & img {
-          height: 100%;
-        }
+        & > span {
+          line-height: 98px; //100-2(border-top border-bottom)
 
-        &--text {
-          width: 40%;
-
-          & h3 {
-            font-size: 18px;
-            color: var(--color-dark-grey);
-            height: 35px;
-          }
-
-          & p {
-            font-size: 14px;
-            color: var(--color-light-grey);
+          & > img {
+            width: 100%;
+            vertical-align: middle;
+            max-height: 97px;
           }
         }
 
-        &--total {
-          width: 30%;
+        &--wrap {
           display: flex;
-          justify-content: space-around;
-          align-items: center;
+          flex-direction: column;
 
-          &--count {
-            width: 140px;
-            height: 30px;
-            display: flex;
-            align-items: center;
+          &--text {
+            & h3 {
+              font-size: 12px;
+              color: var(--color-dark-grey);
+            }
 
-            & > button {
-              width: 30px;
-              height: 30px;
-              background-color: transparent;
-              border: 1px solid var(--color-light-grey);
+            & p {
+              font-size: 10px;
               color: var(--color-light-grey);
-              font-size: 20px;
-              cursor: pointer;
+            }
+          }
+
+          &--total {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 7px;
+
+            &--count {
+              width: 140px;
+              height: 30px;
+              display: flex;
+              align-items: center;
+
+              & > button {
+                width: 30px;
+                height: 22px;
+                background-color: transparent;
+                border: 1px solid var(--color-light-grey);
+                color: var(--color-light-grey);
+                font-size: 20px;
+                cursor: pointer;
+              }
+
+              & > span {
+                width: 76px;
+                height: 22px;
+                text-align: center;
+                font-size: 12px;
+                line-height: 22px;
+                border-top: 1px solid var(--color-light-grey);
+                border-bottom: 1px solid var(--color-light-grey);
+              }
             }
 
             & > span {
-              width: 76px;
-              height: 30px;
-              text-align: center;
-              font-size: 12px;
-              line-height: 30px;
-              border-top: 1px solid var(--color-light-grey);
-              border-bottom: 1px solid var(--color-light-grey);
+              font-size: 18px;
+              color: var(--color-dark-grey);
             }
-          }
 
-          & > span {
-            font-size: 18px;
-            color: var(--color-dark-grey);
-          }
-
-          & img {
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
+            & img {
+              width: 20px;
+              height: 20px;
+              cursor: pointer;
+            }
           }
         }
       }
 
       & > span {
-        margin-left: auto;
+        margin-left: 70%;
         display: flex;
         width: 20%;
         justify-content: space-between;
@@ -218,6 +226,53 @@
           &:nth-child(6) {
             left: 75%;
           }
+        }
+      }
+    }
+    &__datas {
+      &--context {
+        &--items {
+          &--wrap {
+            flex-direction: row;
+            justify-content: space-around;
+
+            &--text {
+              width: 50%;
+
+              & h3 {
+                font-size: 18px;
+                height: 35px;
+              }
+
+              & p {
+                font-size: 14px;
+              }
+            }
+
+            &--total {
+              width: 30%;
+
+              &--count {
+                & > button {
+                  height: 30px;
+                }
+
+                & > span {
+                  height: 30px;
+                  line-height: 30px;
+                }
+              }
+
+              & img {
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
+        }
+
+        & > span {
+          margin-left: auto;
         }
       }
     }

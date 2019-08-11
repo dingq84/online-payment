@@ -1,0 +1,107 @@
+.onlinePayment__paymentType__detail--byshop {
+  &--title {
+    font-size: 16px;
+    color: var(--color-dark-grey);
+    margin-bottom: 18px;
+  }
+
+  &--text {
+    color: var(--color-dark-grey);
+    font-size: 14px;
+    // width: 80%;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & span:nth-child(1) {
+      margin-right: 20px;
+    }
+
+    & span:nth-child(2) {
+      margin-right: 43px;
+      font-size: 30px;
+      font-weight: bold;
+      color: var(--color-light-blue);
+    }
+
+    & span:nth-child(3) {
+      // margin-right: 20px;
+      width: 100%;
+    }
+
+    & > div {
+      // display: block;
+      margin: 15px auto 0;
+
+      & img {
+        cursor: pointer;
+        margin: 0 10px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  &--warning {
+    color: var(--color-light-grey);
+    margin: 0 auto 18px;
+
+    & ul {
+      margin-left: 14px;
+    }
+  }
+
+  &--buttons {
+    display: flex;
+    justify-content: space-around;
+
+    & > a {
+      & button {
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 50px;
+        color: var(--color-white);
+        padding: 13px 30px;
+        font-size: 16px;
+      }
+
+      &:nth-child(1) > button {
+        background-color: var(--color-light-blue);
+      }
+
+      &:nth-child(2) > button {
+        background-color: var(--color-yellow);
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .onlinePayment__paymentType__detail--byshop {
+    &--text {
+      & span:nth-child(3) {
+        margin-right: 20px;
+        width: auto;
+      }
+
+      & > div {
+        display: inline-block;
+      }
+    }
+
+    &--buttons {
+      width: 50%;
+      margin-right: auto;
+      margin-left: auto;
+
+      & > a {
+        width: 45%;
+
+        & > button {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

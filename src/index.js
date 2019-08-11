@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Decoration from './components/decoration/index';
-import OrderInfo from './components/orderInfo/index';
-import PaymentType from './components/paymentType/index';
+import Pages from './routes/paymentType/index';
 import Footer from './components/footer/index';
 
 import './_base.scss';
@@ -14,8 +13,7 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <div className="onlinePayment">
     <Decoration />
-    <OrderInfo />
-    <PaymentType />
+    <Pages />
     <Footer />
   </div>, document.getElementById('root'),
 );

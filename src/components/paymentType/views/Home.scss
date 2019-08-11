@@ -1,0 +1,8 @@
+.onlinePayment__paymentType--warning {
+  color: var(--color-light-grey);
+  font-size: 14px;
+
+  & ul {
+    margin-left: 14px;
+  }
+}

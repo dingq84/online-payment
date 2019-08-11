@@ -1,0 +1,71 @@
+.onlinePayment__pages--routes {
+  padding: 50px 0 60px;
+
+  &--buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+
+    & > a {
+      width: calc(33% - 5px);
+      height: 130px;
+      color: var(--color-light-blue);
+      border: 2px solid var(--color-light-blue);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      & div {
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & img {
+          width: 70%;
+        }
+
+        & h2 {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &--detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    // width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+
+    & > h3 {
+      font-size: 14px;
+    }
+
+    & > ul {
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .onlinePayment__pages--routes {
+    &--buttons {
+      // width: 90%;
+      & > a {
+        width: 290px;
+      }
+    }
+
+    &--detail {
+      width: 80%;
+      padding: 30px;
+    }
+  }
+}
