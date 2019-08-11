@@ -1,6 +1,16 @@
 .onlinePayment__pages--routes {
   padding: 50px 0 60px;
 
+  &--title {
+    width: 97.5%;
+    margin-left: auto;
+    color: var(--color-light-blue);
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-top: 5%;
+  }
+
   &--buttons {
     display: flex;
     justify-content: space-between;
@@ -18,6 +28,11 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        background-color: var(--color-dark-blue);
+      }
 
       & div {
         font-size: 12px;
@@ -33,6 +48,10 @@
           font-size: 12px;
         }
       }
+    }
+
+    & .active {
+      background-color: var(--color-dark-blue);
     }
   }
 
@@ -56,6 +75,11 @@
 }
 @media screen and (min-width: 1024px) {
   .onlinePayment__pages--routes {
+    &--title {
+      font-size: 22px;
+      text-align: left;
+    }
+
     &--buttons {
       // width: 90%;
       & > a {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink, Link } from 'react-router-dom';
 
 
 import Home from '../../components/paymentType/views/Home';
@@ -50,25 +50,28 @@ export default function Index() {
     <Router>
       <div className="onlinePayment__pages--routes">
         <Route path="/" exact component={OrderInfo} />
+        <h1 className="onlinePayment__pages--routes--title">
+          選擇付款方式
+        </h1>
         <div className="onlinePayment__pages--routes--buttons">
-          <Link to="/card">
+          <NavLink to="/card">
             <div key='card'>
               <img src={card} alt={card} />
               <h2>使用信用卡付款</h2>
             </div>
-          </Link>
-          <Link to="/web">
+          </NavLink>
+          <NavLink to="/web">
             <div key='web'>
               <img src={atm} alt={atm} />
               <h2>使用WebATM付款</h2>
             </div>
-          </Link>
-          <Link to="/shop">
+          </NavLink>
+          <NavLink to="/shop">
             <div key='shop'>
               <img src={shop} alt={shop} />
               <h2>使用超商代碼付款</h2>
             </div>
-          </Link>
+          </NavLink>
         </div>
 
         <div className="onlinePayment__pages--routes--detail">

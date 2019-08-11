@@ -1,35 +1,155 @@
 .onlinePayment__decoration {
-  height: 15px;
-  width: 100%;
-  display: flex;
+  &__topbar {
+    height: 15px;
+    width: 100%;
+    display: flex;
 
-  .color1 {
-    background-color: #b3aba6;
-    width: 13%;
+    .color1 {
+      background-color: #b3aba6;
+      width: 13%;
+    }
+
+    .color2 {
+      background-color: #ff8f14;
+      width: 21%;
+    }
+
+    .color3 {
+      background-color: #173060;
+      width: 9%;
+    }
+
+    .color4 {
+      background-color: #f65453;
+      width: 23%;
+    }
+
+    .color5 {
+      background-color: #cc251b;
+      width: 19%;
+    }
+
+    .color6 {
+      background-color: #62a1d2;
+      width: 15%;
+    }
   }
 
-  .color2 {
-    background-color: #ff8f14;
-    width: 21%;
-  }
+  &__steps {
+    margin-top: 5%;
 
-  .color3 {
-    background-color: #173060;
-    width: 9%;
-  }
+    &--title {
+      margin-left: 10%;
+      color: var(--color-dark-blue);
+      font-weight: bold;
+      font-size: 22px;
 
-  .color4 {
-    background-color: #f65453;
-    width: 23%;
-  }
+      &::after {
+        content: "";
+        display: inline-block;
+        margin-left: 60%;
+        width: 15px;
+        height: 15px;
+        border-top: 3px solid var(--color-dark-blue);
+        border-bottom: 3px solid var(--color-dark-blue);
+        background-color: var(--color-dark-blue);
+        padding: 3px 0;
+        background-clip: content-box;
+      }
+    }
 
-  .color5 {
-    background-color: #cc251b;
-    width: 19%;
-  }
+    &--progress {
+      position: relative;
+      width: 70%;
+      height: 39px;
+      // border: 1px solid var(--color-red);
+      margin: 15px auto 0;
 
-  .color6 {
-    background-color: #62a1d2;
-    width: 15%;
+      &--circle {
+        position: absolute;
+        background-color: var(--color-light-grey);
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        &:nth-child(1) {
+          left: 0;
+          background-color: var(--color-light-blue);
+        }
+
+        &:nth-child(4) {
+          left: 50%;
+        }
+
+        &:nth-child(7) {
+          left: 100%;
+        }
+      }
+
+      &--line {
+        position: absolute;
+        border: 1px solid var(--color-light-grey);
+        width: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:nth-child(2) {
+          left: 0;
+        }
+
+        &:nth-child(5) {
+          left: 50%;
+        }
+      }
+
+      &--text {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .onlinePayment__decoration {
+    &__steps {
+      &--title {
+        font-size: 30px;
+        text-align: center;
+        margin-left: 0;
+
+        &::after {
+          content: "";
+          display: none;
+        }
+      }
+
+      &--progress {
+        &--text {
+          display: block;
+          position: absolute;
+          font-size: 14px;
+          top: 100%;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          color: var(--color-light-grey);
+          white-space: nowrap;
+
+          & span:nth-child(1) {
+            display: inline;
+            margin-right: 0.5rem;
+          }
+
+          &:nth-child(3) {
+            left: 20%;
+          }
+
+          &:nth-child(6) {
+            left: 75%;
+          }
+        }
+      }
+    }
   }
 }

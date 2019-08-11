@@ -36,7 +36,7 @@
     font-size: 14px;
     align-items: center;
 
-    & div {
+    & > div {
       width: 80%;
       height: 120px;
       position: relative;
@@ -54,6 +54,23 @@
         width: 100%;
         height: 40px;
         // left: 30%;
+      }
+
+      & > img {
+        position: absolute;
+        top: 30%;
+        right: 5%;
+        cursor: pointer;
+      }
+
+      & > div {
+        display: none;
+        background-color: transparent;
+        width: 150px;
+        height: 60px;
+        position: absolute;
+        top: -30px;
+        right: 0%;
       }
 
       & span {
@@ -100,22 +117,88 @@
     }
   }
 }
+
+.modal {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  height: 200vh;
+  width: 100vw;
+  transform: translate(-50%, -50%);
+  display: none;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40vw;
+    height: 30vh;
+    background-color: var(--color-white);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  & h1 {
+    color: var(--color-light-blue);
+    font-size: 22px;
+    text-align: center;
+    margin-top: 90vh;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    color: var(--color-dark-grey);
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  & button {
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    color: var(--color-white);
+    padding: 13px 30px;
+    font-size: 16px;
+    width: 20%;
+    background-color: var(--color-light-blue);
+    margin-left: 40%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .onlinePayment__paymentType__detail--bycard {
     &--form {
-      & div {
-        height: 50px;
+      & > div {
+        height: 80px;
 
         & input {
           top: 0;
           left: 30%;
           width: 35%;
-          height: 30px;
+          height: 50px;
+        }
+
+        & > img {
+          position: absolute;
+          top: 15%;
+          right: 37%;
         }
 
         & span {
-          top: 0;
+          top: 15%;
           left: 70%;
+        }
+
+        & > div {
+          top: -5%;
+          right: 5%;
+
+          & > img {
+            margin-right: 10%;
+          }
         }
       }
     }
