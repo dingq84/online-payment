@@ -17,19 +17,19 @@ import './index.scss';
 
 export default function Index() {
   const back =
-    <Link to='/'>
+    <Link to='/online-payment/'>
       <button>
         返回訂單
       </button>
     </Link>
   const send =
-    <Link to='/success'>
+    <Link to='/online-payment/success'>
       <button>
         送出訂單
       </button>
     </Link>
   const backHome =
-    <Link to='/'>
+    <Link to='/online-payment/'>
       <button
         style={{
           width: '180px',
@@ -49,24 +49,24 @@ export default function Index() {
   return (
     <Router>
       <div className="onlinePayment__pages--routes">
-        <Route path="/" exact component={OrderInfo} />
+        <Route path="/online-payment/" exact component={OrderInfo} />
         <h1 className="onlinePayment__pages--routes--title">
           選擇付款方式
         </h1>
         <div className="onlinePayment__pages--routes--buttons">
-          <NavLink to="/card">
+          <NavLink to="/online-payment/card">
             <div key='card'>
               <img src={card} alt={card} />
               <h2>使用信用卡付款</h2>
             </div>
           </NavLink>
-          <NavLink to="/web">
+          <NavLink to="/online-payment/web">
             <div key='web'>
               <img src={atm} alt={atm} />
               <h2>使用WebATM付款</h2>
             </div>
           </NavLink>
-          <NavLink to="/shop">
+          <NavLink to="/online-payment/shop">
             <div key='shop'>
               <img src={shop} alt={shop} />
               <h2>使用超商代碼付款</h2>
@@ -75,21 +75,21 @@ export default function Index() {
         </div>
 
         <div className="onlinePayment__pages--routes--detail">
-          <Route path='/' exact component={Home} />
+          <Route path='/online-payment/' exact component={Home} />
           <Route
-            path="/card"
+            path="/online-payment/card"
             render={(props) => <Card {...props} back={back} send={send} />}
           />
           <Route
-            path="/web"
+            path="/online-payment/web"
             render={(props) => <Web {...props} back={back} send={send} />}
           />
           <Route
-            path="/shop"
+            path="/online-payment/shop"
             render={(props) => <Shop {...props} back={back} send={send} />}
           />
           <Route
-            path="/success"
+            path="/online-payment/success"
             render={(props) => <Success {...props} back={backHome} />}
           />
         </div>
